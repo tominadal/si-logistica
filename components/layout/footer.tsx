@@ -8,8 +8,8 @@ export function Footer() {
   return (
     <footer className="flex flex-col md:flex-row md:items-center justify-between gap-10 bg-[#30302f] text-[#f2f2ee] p-[32px_8vw]">
       <div className="flex flex-col gap-4">
-        <a href="#inicio" className="brand" aria-label="SI Logística, inicio">
-          <Image src={logoUrl} alt="SI Logística" width={60} height={32} priority sizes="60px" className="object-contain filter grayscale" />
+        <a href="#inicio" aria-label="SI Logística, inicio" style={{ display: 'block', width: '36px' }}>
+          <Image src={logoUrl} alt="SI Logística" width={36} height={36} priority sizes="36px" className="object-contain filter grayscale" />
         </a>
         <p className="text-[11px] opacity-60">© {new Date().getFullYear()} SI Logística. Hecho para mover.</p>
       </div>
