@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowUpRight, Truck, Package, Check, MoveRight, Phone, Boxes, Grid2X2, List } from 'lucide-react'
+import { ArrowUpRight, Truck, Package, Check, MoveRight, Phone, Boxes, Grid2X2, LayoutGrid } from 'lucide-react'
 
 const services = [
   { title: 'Mudanzas a todo el país', text: 'Flota de última generación y trato cordial. Profesionales capacitados para traslado de hogares y empresas (Telecomunicaciones, Textil).', icon: Truck, wide: true },
@@ -14,7 +14,7 @@ const services = [
 ]
 
 export function Services() {
-  const [view, setView] = useState<'bento' | 'grid' | 'list'>('bento')
+  const [view, setView] = useState<'bento' | 'grid'>('bento')
 
   return (
     <section id="servicios" className="services section">
@@ -25,8 +25,7 @@ export function Services() {
         </div>
         <div className="view-toggle" role="group" aria-label="Vista de servicios">
           <button aria-label="Vista bento" className={view === 'bento' ? 'active' : ''} onClick={() => setView('bento')}><Grid2X2 strokeWidth={1} /></button>
-          <button aria-label="Vista grilla" className={view === 'grid' ? 'active' : ''} onClick={() => setView('grid')}><Grid2X2 strokeWidth={1} /></button>
-          <button aria-label="Vista lista" className={view === 'list' ? 'active' : ''} onClick={() => setView('list')}><List strokeWidth={1} /></button>
+          <button aria-label="Vista grilla" className={view === 'grid' ? 'active' : ''} onClick={() => setView('grid')}><LayoutGrid strokeWidth={1} /></button>
         </div>
       </div>
       <div className={`service-grid ${view}`}>
